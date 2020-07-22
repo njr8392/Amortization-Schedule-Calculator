@@ -86,9 +86,6 @@ func calcHandler(w http.ResponseWriter, r *http.Request) {
 }
 func main() {
 	mux := http.NewServeMux()
-	l := Loan{Principal: 400000, Interest: 0.065, Duration: 30}
-	fmt.Printf("Monthly Payment is %.2f\n", l.monthPmnt())
-
 	mux.HandleFunc("/", index)
 	mux.HandleFunc("/calc", calcHandler)
 	http.ListenAndServe("localhost:8000", mux)
