@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Schedule</title>
+</head>
+<body>
+    <h1>Amortization Schedule</h1>
+    <table class="schedule">
+        <tr class="coulmn-names">
+            <th>Payment Number</th>
+            <th>Interest Payment</th>
+            <th>Principal Payment</th>
+            <th>Balance</th>
+        </tr>
+        {{range .}}
+        <tr>
+        <td>{{.Num}}</td>
+        <td>{{.InterestPmt}}</td>
+        <td>{{.PrincipalPmt}}</td>
+        <td>{{.Balance}}</td>
+        </tr>
+        {{end}}
+    </table>
+    
+</body>
+</html>

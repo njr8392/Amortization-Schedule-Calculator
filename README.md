@@ -1,0 +1,1 @@
+Basic web app that calculates an loan amortization schedule from user input.
